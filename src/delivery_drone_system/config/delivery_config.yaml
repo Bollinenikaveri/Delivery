@@ -1,0 +1,35 @@
+/**:
+  ros__parameters:
+    # Confidence threshold for victim detection (0.0 - 1.0)
+    confidence_threshold: 0.75
+
+    # GPS tolerance for target reached (meters)
+    target_tolerance_m: 1.5
+
+    # State timeouts (seconds)
+    state_timeouts:
+      NAVIGATING: 60
+      ALIGNING: 30
+      CONFIRMING: 15
+      DROPPING: 30
+
+    # Drone parameters
+    drone:
+      max_altitude_m: 100
+      cruise_speed_ms: 15
+      battery_capacity_percent: 100
+      gps_accuracy_m: 2.0
+
+    # Camera parameters
+    camera:
+      resolution_width: 1920
+      resolution_height: 1080
+      frame_rate_fps: 30
+
+    # Payload parameters
+    payload:
+      max_weight_kg: 5
+      drop_delay_seconds: 0.5
+
+    # System health check interval (seconds)
+    health_check_interval: 2.0
