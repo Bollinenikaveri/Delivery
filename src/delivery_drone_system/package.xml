@@ -2,18 +2,22 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>delivery_drone_system</name>
-  <version>0.0.0</version>
-  <description>Autonomous delivery drone system with multi-node ROS2 architecture</description>
+  <version>0.1.0</version>
+  <description>Autonomous delivery drone system with MAVSDK integration for real drone control</description>
   <maintainer email="kaveribollineni20004@gmail.com">kaveri</maintainer>
   <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
+  <!-- ROS2 Dependencies -->
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>nav_msgs</depend>
+
+  <!-- Note: mavsdk is a pip package, install with: pip3 install mavsdk -->
+  <!-- Optional: ultralytics for YOLO detection: pip3 install ultralytics -->
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

@@ -33,6 +33,8 @@ setup(
             'visual_alignment=delivery_drone_system.visual_alignment_node:main',
             'victim_confirmation=delivery_drone_system.victim_confirmation_node:main',
             'payload_drop_controller=delivery_drone_system.payload_drop_controller_node:main',
+            'drone_interface=delivery_drone_system.drone_interface_node:main',
+            'telemetry_monitor=delivery_drone_system.telemetry_monitor_node:main',
         ],
     },
 )

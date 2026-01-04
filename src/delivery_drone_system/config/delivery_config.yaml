@@ -13,10 +13,28 @@
       CONFIRMING: 15
       DROPPING: 30
 
-    # Drone parameters
+    # ============== MAVSDK Configuration ==============
+    # Connection URL for MAVSDK
+    # Options:
+    #   - udp://:14540        (PX4 SITL simulation)
+    #   - udp://:14550        (QGroundControl default)
+    #   - serial:///dev/ttyUSB0:57600   (USB telemetry radio)
+    #   - serial:///dev/ttyACM0:115200  (direct USB to Pixhawk)
+    connection_url: "udp://:14540"
+    
+    # Simulation mode (true = no real drone, false = connect to real drone)
+    simulation_mode: true
+
+    # ============== Telemetry Monitor Thresholds ==============
+    low_battery_threshold: 20.0      # Warning level (%)
+    critical_battery_threshold: 10.0  # Critical level - land immediately (%)
+    max_attitude_angle: 45.0          # Max roll/pitch before warning (degrees)
+
+    # ============== Drone Parameters ==============
     drone:
       max_altitude_m: 100
       cruise_speed_ms: 15
+      takeoff_altitude_m: 10.0
       battery_capacity_percent: 100
       gps_accuracy_m: 2.0
 
